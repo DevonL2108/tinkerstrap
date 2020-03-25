@@ -12,17 +12,60 @@
     
     
     <style>
-      
+    
+    body {
+      background-color: #FFDFDF;
+    }
+    
+    .popover {
+      color: darkred;
+    }
+    
+    .btn {
+      background-color: #BB0000;
+      color: white !important;
+    }
+    
+    a {
+      color: white;
+    }
+    
+    img {
+      position: absolute; left: 50%; top: 50%;
+      margin-left: -250px;
+      margin-top: -200px;
+    }
+    
+    
     </style>
   </head>
   <body>
-    
-    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!--Popover-->
+    <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    </script>
+    
+    <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Hello!" data-content="Yay! You clicked me :D">Click Me!</a>
+    
+    <!--Spinners-->
+    <button class="btn btn-danger" type="button" disabled>
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+      <span class="sr-only">Loading...</span>
+    </button>
+    
+    <!--Shadows-->
+    <div class="fixed-bottom shadow p-3 mb-5 bg-white rounded">I am fixed at the bottom and have a shadow :o</div>
+    
+    <!--Borders-->
+    <img src="cherryblossom.gif" alt="..." class="rounded-0 border border-dark shadow-lg p-1 mb-5 bg-white rounded">
   </body>
 </html>
